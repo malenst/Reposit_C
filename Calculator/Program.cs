@@ -27,6 +27,14 @@
     {
         a = Convert.ToInt32(str.Split("/")[0]);
         b = Convert.ToInt32(str.Split("/")[1]);
+    try
+    {
         res = a / b;
-    }    
+    }
+    catch (DivideByZeroException ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+
+}    
     Console.WriteLine(res);
